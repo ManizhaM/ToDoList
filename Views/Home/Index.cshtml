@@ -1,0 +1,16 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+@model todolistapp.Models.Users
+
+<div class="text-center">
+    <h1 class="display-4">Welcome @Model?.name</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <a asp-action="Privacy" asp-controller="Home">Add task</a>
+    <ul>
+        @foreach (var data in ViewBag.Tasks)
+        {
+            <li>@data.name</li>
+        }
+    </ul>
+</div>

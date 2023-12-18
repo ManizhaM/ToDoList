@@ -1,0 +1,13 @@
+﻿@{
+    ViewData["Title"] = "Privacy Policy";
+}
+<h1>@ViewData["Title"]</h1>
+
+<form class="login-form" method="post" action="/Home/CreateTask">
+    <input type="text" placeholder="name" name="name" />
+    <input type="text" placeholder="description" name="description" />
+    <input type="date" placeholder="date" name="deadline" />
+    <input type="text" placeholder="priority" name="priority" />
+    <input type="text" placeholder="userid" name="userid" />
+    <button type="submit" asp-action="CreateTask" asp-controller="Home">Create Task</button>
+</form>
